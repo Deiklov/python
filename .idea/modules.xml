@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/djangoshop.iml" filepath="$PROJECT_DIR$/.idea/djangoshop.iml" />
-      <module fileurl="file://$USER_HOME$/Desktop/shop-1.8.2-3-4-ajax/.idea/shop-1.8.2-3-4-ajax.iml" filepath="$USER_HOME$/Desktop/shop-1.8.2-3-4-ajax/.idea/shop-1.8.2-3-4-ajax.iml" />
     </modules>
   </component>
 </project>

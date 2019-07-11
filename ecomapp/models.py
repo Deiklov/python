@@ -31,6 +31,11 @@ def image_folder(instance, filename):
     return "{0}/{1}".format(instance.slug, filename)
 
 
+class ProductManager(models.Manager):
+    def all(self, *args, **kwargs):
+        return super(ProductManager, self).get_queryset().filter(available=True)
+
+
 class Product(models.Model):
     category = models.ForeignKey(Category)
     brand = models.ForeignKey(Brand)
@@ -40,6 +45,7 @@ class Product(models.Model):
     image = models.ImageField(upload_to=image_folder)
     price = models.DecimalField(max_digits=9, decimal_places=2)
     available = models.BooleanField(default=True)
+    objects=ProductManager()
 
     def __unicode__(self):
         return self.title
