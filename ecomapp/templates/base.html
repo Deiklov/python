@@ -62,14 +62,14 @@
 
     <!-- Page Content -->
     <div class="container">
-
+        {% block content %}
         <div class="row">
 
             <div class="col-md-3">
                 <p class="lead">Shop Name</p>
                 <div class="list-group">
                     {% for category in categories %}
-                    <a href="#" class="list-group-item">{{ category }}</a>
+                    <a href="{{ category.get_absolute_url }}" class="list-group-item">{{ category }}</a>
                     {% endfor %}
                 </div>
             </div>
@@ -114,7 +114,7 @@
                                 <img src="{{ product.image.url }}" alt="" style="width: 100%; height: 250px;">
                                 <div class="caption">
                                     <h4 class="pull-right">{{ product.price }} rub</h4>
-                                    <h5><strong><a href="#">{{ product.title }}</a></strong></h5>
+                                    <h5><strong><a href="{{ product.get_absolute_url }}">{{ product.title }}</a></strong></h5>
                                     <p>{{ product.description }}</p>
                                 </div>
 
@@ -124,7 +124,7 @@
                 </div>
             </div>
         </div>
-
+        {% endblock content %}
     </div>
     <!-- /.container -->
 

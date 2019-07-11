@@ -3,8 +3,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.contrib import admin
-from django.db.models.signals import pre_save
-from django.utils.text import slugify
+from django.core.urlresolvers import reverse
 
 
 class Category(models.Model):
@@ -13,7 +12,8 @@ class Category(models.Model):
 
     def __unicode__(self):
         return self.name
-
+    def get_absolute_url(self):
+        return reverse('category_detail',kwargs={'category_slug':self.slug})
 
 class TitlePrepopulated(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("name",)}
@@ -49,3 +49,5 @@ class Product(models.Model):
 
     def __unicode__(self):
         return self.title
+    def get_absolute_url(self):
+        return reverse('product_detail',kwargs={'product_slug':self.slug})
