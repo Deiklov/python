@@ -15,9 +15,11 @@ def base_view(request):
 
 
 def product_view(request, product_slug):
+    categories = Category.objects.all()
     product = Product.objects.get(slug=product_slug)
     context = {
-        'product': product
+        'product': product,
+        'categories': categories
     }
     return render(request, 'product.html', context)
 
