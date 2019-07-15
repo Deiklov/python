@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d59698b-8ad9-47f1-b5e0-2cd7c82bd425" name="Default" comment="11:32">
-      <change afterPath="$PROJECT_DIR$/ecomapp/templates/cart.html" afterDir="false" />
+    <list default="true" id="1d59698b-8ad9-47f1-b5e0-2cd7c82bd425" name="Default" comment="23:01">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecomapp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecomapp/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecomapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecomapp/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecomapp/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/ecomapp/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomapp/templates/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/ecomapp/templates/cart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecomapp/templates/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/ecomapp/templates/product.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecomapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecomapp/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecomapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecomapp/views.py" afterDir="false" />
@@ -40,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ecomapp/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="66" column="41" lean-forward="true" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
+            <state relative-caret-position="186">
+              <caret line="67" column="39" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
               </folding>
@@ -52,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ecomapp/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="42" column="18" lean-forward="true" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+            <state relative-caret-position="276">
+              <caret line="150" column="57" selection-start-line="150" selection-start-column="57" selection-end-line="150" selection-end-column="57" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -65,8 +64,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ecomapp/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+            <state relative-caret-position="126">
+              <caret line="7" column="68" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -74,11 +73,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ecomapp/templates/cart.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="93" selection-start-line="13" selection-start-column="93" selection-end-line="13" selection-end-column="93" />
+            <state relative-caret-position="150">
+              <caret line="47" column="4" selection-start-line="47" selection-start-column="4" selection-end-line="66" selection-end-column="7" />
+              <folding>
+                <element signature="e#607#623#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -95,11 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ecomapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-858">
-              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+            <state relative-caret-position="528">
+              <caret line="129" column="72" selection-start-line="129" selection-start-column="72" selection-end-line="129" selection-end-column="72" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
               </folding>
@@ -110,8 +112,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ecomapp/templates/product.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="41" lean-forward="true" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+            <state relative-caret-position="546">
+              <caret line="36" column="22" lean-forward="true" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+              <folding>
+                <element signature="e#271#294#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,6 +140,7 @@
       <find>navbar</find>
       <find>cart = Cart.objects.first()</find>
       <find>add_to</find>
+      <find>badge</find>
     </findStrings>
     <replaceStrings>
       <replace>product</replace>
@@ -157,9 +163,9 @@
         <option value="$PROJECT_DIR$/ecomapp/models.py" />
         <option value="$PROJECT_DIR$/ecomapp/templates/product.html" />
         <option value="$PROJECT_DIR$/ecomapp/templates/base.html" />
+        <option value="$PROJECT_DIR$/ecomapp/views.py" />
         <option value="$PROJECT_DIR$/ecomapp/urls.py" />
         <option value="$PROJECT_DIR$/ecomapp/templates/cart.html" />
-        <option value="$PROJECT_DIR$/ecomapp/views.py" />
       </list>
     </option>
   </component>
@@ -197,6 +203,16 @@
               <item name="djangoshop" type="462c0819:PsiDirectoryNode" />
               <item name="ecomapp" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="djangoshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="djangoshop" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="djangoshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="djangoshop" type="462c0819:PsiDirectoryNode" />
+              <item name="static_in_dev" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -272,7 +288,7 @@
       <option name="presentableId" value="Default" />
       <updated>1562760612758</updated>
       <workItem from="1562917230809" duration="5595000" />
-      <workItem from="1563113559288" duration="11862000" />
+      <workItem from="1563113559288" duration="23816000" />
     </task>
     <task id="LOCAL-00001" summary="21:26">
       <created>1562869660054</created>
@@ -288,14 +304,21 @@
       <option name="project" value="LOCAL" />
       <updated>1562920386235</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="23:01">
+      <created>1563134519422</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1563134519422</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17457000" />
+    <option name="totallyTimeSpent" value="29411000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="32" width="1555" height="868" extended-state="6" />
+    <frame x="0" y="32" width="1555" height="868" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49652296" visible="true" weight="0.19746497" />
@@ -327,7 +350,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="21:26" />
     <MESSAGE value="11:32" />
-    <option name="LAST_COMMIT_MESSAGE" value="11:32" />
+    <MESSAGE value="23:01" />
+    <option name="LAST_COMMIT_MESSAGE" value="23:01" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -408,8 +433,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ecomapp/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="42" column="18" lean-forward="true" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+        <state relative-caret-position="276">
+          <caret line="150" column="57" selection-start-line="150" selection-start-column="57" selection-end-line="150" selection-end-column="57" />
           <folding>
             <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -417,12 +442,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ecomapp/models.py">
+    <entry file="file://$PROJECT_DIR$/ecomapp/templates/product.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="66" column="41" lean-forward="true" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
+        <state relative-caret-position="546">
+          <caret line="36" column="22" lean-forward="true" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
           <folding>
-            <element signature="e#24#63#0" expanded="true" />
+            <element signature="e#271#294#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -437,36 +462,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ecomapp/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="67" column="39" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ecomapp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        <state relative-caret-position="126">
+          <caret line="7" column="68" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ecomapp/templates/product.html">
+    <entry file="file://$PROJECT_DIR$/ecomapp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="41" lean-forward="true" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+        <state relative-caret-position="528">
+          <caret line="129" column="72" selection-start-line="129" selection-start-column="72" selection-end-line="129" selection-end-column="72" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ecomapp/templates/cart.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="93" selection-start-line="13" selection-start-column="93" selection-end-line="13" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecomapp/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-858">
-          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        <state relative-caret-position="150">
+          <caret line="47" column="4" selection-start-line="47" selection-start-column="4" selection-end-line="66" selection-end-column="7" />
           <folding>
-            <element signature="e#24#63#0" expanded="true" />
+            <element signature="e#607#623#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

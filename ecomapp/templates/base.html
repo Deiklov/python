@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Shop Homepage - Start Bootstrap Template</title>
+    <title>Shop stamp</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel='stylesheet' href='{% static "css/bootstrap.css" %}'>
@@ -57,7 +57,8 @@
                         </li>
                     {% endif %}
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="{% url 'cart' %}">Корзина<span class="badge">{{ cart.items.count }}</span> </a>
+                        <li><a href="{% url 'cart' %}">Корзина<span class="badge"
+                                                                    id="cart_count">{{ cart.items.count }}</span> </a>
                         </li>
                     </ul>
                 </ul>
@@ -148,7 +149,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>Copyright &copy; Your Website 2019</p>
                 </div>
             </div>
         </footer>
