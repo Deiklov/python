@@ -23,6 +23,12 @@
                 </a></td>
             </tr>
         {% endfor %}
+        <tr>
+            <td></td>
+            <td class="text-center"><strong>Итого:</strong></td>
+            <td class="text-center" id="cart-total-price"><strong>{{ cart.cart_total }} руб.</strong></td>
+            <td class="text-center"></td>
+        </tr>
     </table>
     <script src='{% static "js/jquery.js" %}'></script>
     <script>
@@ -60,6 +66,8 @@
                     data: data,
                     success: function (data) {
                         $('#cart-item-total-' + item_id).html(parseFloat(data.item_total).toFixed(2) + ' руб.')
+                        $('#cart-total-price').html('<strong>' + parseFloat(data.cart_total_price).toFixed(2)
+                            + ' руб. </strong>')
                     }
                 })
 
