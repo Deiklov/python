@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+    {% if cart.items.count > 0 %}
+        <div class="my-cart">
     <table class="table">
         <tr>
             <td class="text-center">Tovar</td>
@@ -30,9 +32,16 @@
             <td class="text-center"></td>
         </tr>
     </table>
+        </div>
+        <h3 class="cart-empty"></h3>
+    {% else %}
+        <h3 class="text-center">Ваша корзина пуста</h3>
+    {% endif %}
+
     <script src='{% static "js/jquery.js" %}'></script>
     <script>
         $(document).ready(function () {
+            $('.cart-empty').css('display', 'none')
             $('.remove_from_cart').on('click', function (e) {
                 e.preventDefault()
                 product_slug = $(this).attr('data-slug')
@@ -48,6 +57,13 @@
                     success: function (data) {
                         $("#cart_count").html(data.cart_total)
                         $('#' + product_slug).remove()
+                        $('#cart-total-price').html('<strong>' + parseFloat(data.cart_total_price).toFixed(2) + ' руб. </strong>')
+                        if (parseInt(data.cart_total) == 0) {
+                            $('.my-cart').remove()
+                            $('.cart-empty').css('display', 'block')
+                            $('.cart-empty').html('<h3 class="text-center">Ваша корзина пуста</h3>')
+                        }
+
                     }
                 })
             })
@@ -66,8 +82,7 @@
                     data: data,
                     success: function (data) {
                         $('#cart-item-total-' + item_id).html(parseFloat(data.item_total).toFixed(2) + ' руб.')
-                        $('#cart-total-price').html('<strong>' + parseFloat(data.cart_total_price).toFixed(2)
-                            + ' руб. </strong>')
+                        $('#cart-total-price').html('<strong>' + parseFloat(data.cart_total_price).toFixed(2) + ' руб. </strong>')
                     }
                 })
 
