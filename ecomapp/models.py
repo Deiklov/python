@@ -120,7 +120,7 @@ class Order(models.Model):
                                    default='Самовывоз')
     date = models.DateTimeField(auto_now_add=True)
     comments = models.TextField()
-    status = models.CharField(max_length=100, choices=ORDER_STATUS_CHOICES)
+    status = models.CharField(max_length=100, choices=ORDER_STATUS_CHOICES, default=ORDER_STATUS_CHOICES[0][0])
 
     def __unicode__(self):
         return "Заказ №{0}".format(str(self.id))
