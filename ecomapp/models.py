@@ -110,7 +110,7 @@ ORDER_STATUS_CHOICES = (
 
 class Order(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
-    items = models.ManyToManyField(Cart)
+    items = models.ForeignKey(Cart)
     total = models.DecimalField(max_digits=9, decimal_places=2, default=0)
     first_name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=200)
