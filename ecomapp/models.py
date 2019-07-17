@@ -4,6 +4,8 @@ from __future__ import unicode_literals
 from django.db import models
 from django.contrib import admin
 from django.core.urlresolvers import reverse
+from decimal import Decimal
+from django.conf import settings
 
 
 class Category(models.Model):
@@ -85,3 +87,40 @@ class Cart(models.Model):
             if cart_item.product == product:
                 cart.items.remove(cart_item)
                 cart.save()
+
+    def change_qty(self, qty, item_id):
+        cart = self
+        cart_item = CartItem.objects.get(id=int(item_id))
+        cart_item.qty = int(qty)
+        cart_item.item_total = int(qty) * Decimal(cart_item.product.price)
+        cart_item.save()
+        new_cart_total = 0.00
+        for item in cart.items.all():
+            new_cart_total += float(item.item_total)
+        cart.cart_total = new_cart_total
+        cart.save()
+
+
+ORDER_STATUS_CHOICES = (
+    ('Принят в обработку', 'Принят в обработку'),
+    ('Выполняется', 'Выполняется'),
+    ('Оплачен', 'Оплачен')
+)
+
+
+class Order(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL)
+    items = models.ManyToManyField(Cart)
+    total = models.DecimalField(max_digits=9, decimal_places=2, default=0)
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200)
+    phone = models.CharField(max_length=20)
+    address = models.CharField(max_length=255)
+    buying_type = models.CharField(max_length=40, choices=(('Самовывоз', 'Самовывоз'), ('Доставка', 'Доставка')),
+                                   default='Самовывоз')
+    date = models.DateTimeField(auto_now_add=True)
+    comments = models.TextField()
+    status = models.CharField(max_length=100, choices=ORDER_STATUS_CHOICES)
+
+    def __unicode__(self):
+        return "Заказ №{0}".format(str(self.id))
