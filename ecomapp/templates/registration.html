@@ -6,6 +6,7 @@
     <div class="col-sm-8 col-sm-offset-2">
         <hr>
         <form action="" method="post">
+            {% csrf_token %}
             {{ form|crispy }}
             <input type="submit" class="btn btn-success btn-block" value="Зарегестрироваться">
         </form>

@@ -17,7 +17,7 @@
          </a>
      {% else %}
          <p class="text-center">Заказать товар могут только авторизованные пользователи. Пожалуйста,
-             <a href="#">войдите</a> или <a href="{% url 'registration' %}">зарегистрируйтесь</a></p>
+             <a href="{% url 'login' %}">войдите</a> или <a href="{% url 'registration' %}">зарегистрируйтесь</a></p>
      {% endif %}
  </div>
     <script src='{% static "js/jquery.js" %}'></script>

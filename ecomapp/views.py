@@ -4,7 +4,8 @@ from django.shortcuts import render
 from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect, JsonResponse
 from ecomapp.models import Category, Product, CartItem, Cart, Order
-from ecomapp.forms import OrderForm, RegistrationForm
+from ecomapp.forms import OrderForm, RegistrationForm, LoginForm
+from django.contrib.auth import authenticate, login
 
 
 def base_view(request):
@@ -70,8 +71,10 @@ def cart_view(request):
         cart_id = cart.id
         request.session['cart_id'] = cart_id
         cart = Cart.objects.get(id=cart_id)
+    categories = Category.objects.all()
     context = {
-        'cart': cart
+        'cart': cart,
+        'categories': categories
     }
     return render(request, "cart.html", context)
 
@@ -153,8 +156,10 @@ def checkout_view(request):
         cart_id = cart.id
         request.session['cart_id'] = cart_id
         cart = Cart.objects.get(id=cart_id)
+    categories = Category.objects.all()
     context = {
-        'cart': cart
+        'cart': cart,
+        'categories': categories
     }
     return render(request, 'checkout.html', context)
 
@@ -171,9 +176,11 @@ def order_create_view(request):
         request.session['cart_id'] = cart_id
         cart = Cart.objects.get(id=cart_id)
     form = OrderForm(request.POST or None)
+    categories = Category.objects.all()
     context = {
         'form': form,
-        'cart': cart
+        'cart': cart,
+        'categories': categories
     }
     return render(request, 'order.html', context)
 
@@ -190,6 +197,7 @@ def make_order_view(request):
         request.session['cart_id'] = cart_id
         cart = Cart.objects.get(id=cart_id)
     form = OrderForm(request.POST or None)
+    categories = Category.objects.all()
     if form.is_valid():
         name = form.cleaned_data['name']
         last_name = form.cleaned_data['last_name']
@@ -212,19 +220,58 @@ def make_order_view(request):
         del request.session['cart_id']
         del request.session['total']
         return HttpResponseRedirect(reverse('thank_you'))
+    return render(request, 'order.html', {'categories': categories})
 
 
 def account_view(request):
     order = Order.objects.filter(user=request.user).order_by('-id')
+    categories = Category.objects.all()
     context = {
-        'order': order
+        'order': order,
+        'categories': categories
     }
     return render(request, 'account.html', context)
 
 
 def registration_view(request):
     form = RegistrationForm(request.POST or None)
+    categories = Category.objects.all()
+    if form.is_valid():
+        new_user = form.save(commit=False)
+        username = form.cleaned_data['username']
+        password = form.cleaned_data['password']
+        email = form.cleaned_data['email']
+        first_name = form.cleaned_data['first_name']
+        last_name = form.cleaned_data['last_name']
+        new_user.username = username
+        new_user.set_password(password)
+        new_user.first_name = first_name
+        new_user.last_name = last_name
+        new_user.email = email
+        new_user.save()
+        login_user = authenticate(username=username, password=password)
+        if login_user:
+            login(request, login_user)
+            return HttpResponseRedirect(reverse('base'))
     context = {
-        'form': form
+        'form': form,
+        'categories': categories
     }
     return render(request, 'registration.html', context)
+
+
+def login_view(request):
+    form = LoginForm(request.POST or None)
+    categories = Category.objects.all()
+    if form.is_valid():
+        username = form.cleaned_data['username']
+        password = form.cleaned_data['password']
+        login_user = authenticate(username=username, password=password)
+        if login_user:
+            login(request, login_user)
+            return HttpResponseRedirect(reverse('base'))
+    context = {
+        'form': form,
+        'categories': categories
+    }
+    return render(request, 'login.html', context)
