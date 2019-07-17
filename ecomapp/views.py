@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect, JsonResponse
 from ecomapp.models import Category, Product, CartItem, Cart, Order
-from ecomapp.forms import OrderForm
+from ecomapp.forms import OrderForm, RegistrationForm
 
 
 def base_view(request):
@@ -212,3 +212,19 @@ def make_order_view(request):
         del request.session['cart_id']
         del request.session['total']
         return HttpResponseRedirect(reverse('thank_you'))
+
+
+def account_view(request):
+    order = Order.objects.filter(user=request.user).order_by('-id')
+    context = {
+        'order': order
+    }
+    return render(request, 'account.html', context)
+
+
+def registration_view(request):
+    form = RegistrationForm(request.POST or None)
+    context = {
+        'form': form
+    }
+    return render(request, 'registration.html', context)
